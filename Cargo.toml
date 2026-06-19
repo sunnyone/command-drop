@@ -1,0 +1,13 @@
+[package]
+name = "command-drop"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["gui"]
+gui = ["dep:gtk4", "dep:vte4"]
+
+[dependencies]
+gtk4 = { version = "0.11", optional = true }
+vte4 = { version = "0.10", optional = true }
+zbus = { version = "4", features = ["blocking"] }
